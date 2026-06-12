@@ -1,0 +1,40 @@
+/* Container for the image and text */
+.main-banner {
+    position: relative;
+    width: 100%;
+    max-height: 500px; /* Adjust height based on your design */
+    overflow: hidden;
+}
+
+/* Make sure the image fills the width and stays background-like */
+.banner-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(60%); /* Darkens the image so white text is readable */
+}
+
+/* Absolutely positions the text directly over the image */
+.banner-text {
+    position: absolute;
+    top: 50%;         /* Center vertically */
+    left: 50%;        /* Center horizontally */
+    transform: translate(-50%, -50%); /* Precise pixel alignment */
+    text-align: center;
+    color: #ffffff;   /* Clean white text */
+    width: 80%;       /* Prevents text from hitting the screen edges */
+}
+
+/* Title styling */
+.banner-text h1 {
+    font-size: 4rem;  /* Large impact size */
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Subtitle styling */
+.banner-text p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
