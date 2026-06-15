@@ -1,40 +1,88 @@
-/* Container for the image and text */
-.main-banner {
-    position: relative;
-    width: 100%;
-    max-height: 500px; /* Adjust height based on your design */
-    overflow: hidden;
+/* General Page Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Make sure the image fills the width and stays background-like */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Banner Styling */
+.main-banner {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.banner-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .banner-content img {
     width: 100%;
     height: auto;
     display: block;
-    filter: brightness(60%); /* Darkens the image so white text is readable */
+    border-radius: 8px;
 }
 
-/* Absolutely positions the text directly over the image */
 .banner-text {
-    position: absolute;
-    top: 50%;         /* Center vertically */
-    left: 50%;        /* Center horizontally */
-    transform: translate(-50%, -50%); /* Precise pixel alignment */
-    text-align: center;
-    color: #ffffff;   /* Clean white text */
-    width: 80%;       /* Prevents text from hitting the screen edges */
+    margin-top: 15px;
 }
 
-/* Title styling */
 .banner-text h1 {
-    font-size: 4rem;  /* Large impact size */
-    margin-bottom: 20px;
-    font-family: Arial, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-/* Subtitle styling */
-.banner-text p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    font-family: Arial, sans-serif;
+/* Content Grid Styling */
+.content-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    gap: 40px;
+}
+
+/* Flips the row order for the alternating layout effect */
+.row.reverse {
+    flex-direction: row-reverse;
+}
+
+.column {
+    flex: 1;
+}
+
+.text-col h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.img-col img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    background-color: #ddd; /* Serves as a gray placeholder box if image is missing */
+    min-height: 200px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .row, .row.reverse {
+        flex-direction: column;
+    }
 }
