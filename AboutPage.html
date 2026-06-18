@@ -3,31 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terra Nil Project</title>
-    <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="style.css">
+    <title>About Me</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .about-container {
+            background: #ffffff;
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+        .profile-section {
+            text-align: center;
+        }
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            display: inline-block;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+        .name {
+            font-size: 1.5rem;
+            color: #111;
+            margin-bottom: 5px;
+        }
+        .title {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .content-section h1 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .content-section p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .cta-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+        .cta-btn:hover {
+            background-color: #2980b9;
+        }
+        @media (max-width: 600px) {
+            .about-container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+                gap: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-     <!-- Navigation Bar -->
-<div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-</div>
 
-    </div>
-</body>
-    <!-- Banner Container -->
-    <div class="main-banner">
-        <div class="banner-content">
-            <!-- This uses your exact file name from your folder -->
-            <img src="Screenshot 2026-06-17 095006.png" alt="Terra Nil Banner">
-            <div class="banner-text">
-                <h1>Terra Nil</h1>
-                <p>How Terra Nil transforms players into digital conversionists.</p>
-            </div>
+    <div class="about-container">
+        <!-- Left Side: Profile Image & Headline -->
+        <div class="profile-section">
+            <!-- Replace with your actual image link -->
+            <div class="avatar" style="background-image: url('https://placeholder.com'); background-size: cover;"></div>
+            <h2 class="name">[Your Name]</h2>
+            <p class="title">[Your Profession/Role]</p>
         </div>
 
+        <!-- Right Side: The Story -->
+        <div class="content-section">
+            <h1>Nice to meet you!</h1>
+            <p><strong>[Write your introduction here]</strong>. Start with a hook that answers who you are and who you serve. Keep it reader-focused. Explain how your skills help solve your audience's core problem.</p>
 
+            <p><strong>[Write your background here]</strong>. Share the defining moment or experience that built your skillset. Keep paragraphs short to make scanning easy. Highlight a couple of major milestones or values.</p>
 
+            <p><strong>[Write your personal touch here]</strong>. Break up the professional talk with human details. Share what you love doing when you are away from your screen. This builds authentic trust and connection.</p>
+
+            <a href="mailto:your-email@example.com" class="cta-btn">[Your Call to Action]</a>
+        </div>
+    </div>
+
+</body>
+</html>
