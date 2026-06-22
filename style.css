@@ -123,3 +123,134 @@ body {
     width: 48%;            /* Ensures both fit on one line */
     height: auto;          /* Maintains the aspect ratio */
 }
+body {
+  margin: 0; /* This removes the tiny gap at the very top and sides */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+/* Navigation bar container */
+.topnav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: row;    /* Places logo and links next to each other */
+  justify-content: center; /* Centers the whole group horizontally */
+  align-items: center;    /* Aligns logo and words vertically straight */
+  padding: 15px 0;
+  gap: 30px;              /* Spacing between the logo and the links container */
+}
+
+/* Logo sizing */
+.nav-logo img {
+  height: 40px;           /* Adjust this to make your logo smaller or larger */
+  width: auto;
+  display: block;
+}
+
+/* Links container */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;              /* Spacing between individual links */
+}
+
+/* Individual links styling */
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 8px 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+/* Navigation bar container */
+.topnav {
+  background-color: #ffffff; /* Sets the bar background to white */
+  overflow: hidden;
+  border-bottom: 1px solid #e0e0e0; /* Optional: adds a subtle bottom border so it stands out against a white page */
+}
+
+/* Navigation bar links */
+.topnav a {
+  float: left;
+  color: #000000; /* Sets text color to black */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold; /* Makes the text bold */
+}
+
+/* Hover state (When you mouse over the links) */
+.topnav a:hover {
+  background-color: #f0f0f0; /* Soft gray background on hover */
+  color: #000000; /* Keeps text black on hover */
+}
+
+/* Active/Current page link (Optional: if you still want a highlighted tab) */
+.topnav a.active {
+  background-color: #e0e0e0; /* Darker gray to show which page is selected */
+  color: #000000;
+}
+/* Navigation bar container */
+.topnav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center; /* Centers the links perfectly */
+  align-items: center;
+  padding: 15px 20px;
+  position: relative;      /* Anchors the absolute logo */
+  min-height: 50px;
+}
+
+/* Logo placement (Far Left) */
+.nav-logo {
+  position: absolute;
+  left: 20px;
+}
+
+/* Logo sizing */
+.nav-logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* Links container remaining in the center */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Individual links styling */
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 8px 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover state (Soft gray when mouse moves over) */
+.nav-links a:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+/* Active page highlight */
+.nav-links a.active {
+  background-color: #e0e0e0; /* Gray box only on the active page */
+  border-radius: 4px;
+}
+
