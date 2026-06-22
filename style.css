@@ -111,5 +111,15 @@ body {
 /* Add a color to the active/current link */
 .topnav a.active {
   background-color: #04AA6D;
-  color: white;
+  color: white
+}
+.banner-container {
+    display: flex;         /* Aligns items side-by-side */
+    gap: 15px;             /* Adds space between the images */
+    justify-content: center; /* Centers the images on the screen */
+}
+
+.banner-container img {
+    width: 48%;            /* Ensures both fit on one line */
+    height: auto;          /* Maintains the aspect ratio */
 }
