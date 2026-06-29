@@ -449,17 +449,18 @@ h1 {
         <img src="w3images/map.jpg" alt="Terra Nil Banner">
     </div>
 
-    <!-- Navigation Bar (Now underneath the banner) -->
-    <nav class="navbar">
-        <a href="Homepage.html">Home</a>
-        <a href="News.html">News</a>
-        <a href="AboutPage.html" class="active">About</a>
-    </nav>
+   /* Navigation bar container */
+.topnav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: row;    /* Places logo and links next to each other */
+  justify-content: center; /* Centers the whole group horizontally */
+  align-items: center;    /* Aligns logo and words vertically straight */
+  padding: 15px 0;
+  gap: 30px;              /* Spacing between the logo and the links container */
+}
 
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Rest of your code stays exactly the same -->
-....
 .row {
     display: flex;
     gap: 30px; /* Adds spacing between text and picture */
@@ -566,4 +567,109 @@ h1 {
         width:100%;
     }
 
+}
+......
+/* Navigation bar container */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ffffff;
+    padding: 10px 20px;
+}
+
+/* Individual navigation links */
+.navbar a {
+    float: left;
+  color: #333333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Hover effect for links */
+.navbar a:hover {
+    color: #666666;
+}
+
+/* Style for the current/active page link */
+.navbar a.active {
+    border-bottom: 2px solid #000000;
+    color: #000000;
+}
+.....
+/* ==========================================
+   LAYOUT STRUCTURE (The Side-by-Side Split)
+   ========================================== */
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    /* Creates the two distinct columns from your drawing */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Left side stays as text content */
+.left-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Right side holds the relocated heading and image box */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ==========================================
+   RIGHT COLUMN COMPONENT (Your Black Drawing)
+   ========================================== */
+
+/* The "Contact Me" heading placed on the right side */
+.right-column h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    align-self: flex-start; /* Aligns left within the right column */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* The thick border box surrounding the photo */
+.profile-box {
+    width: 100%;
+    max-width: 400px;
+    border: 3px solid #000000; /* Recreates your drawn border */
+    padding: 10px;
+    background-color: #fafafa;
+}
+
+/* Ensures the user photo scales perfectly inside the border */
+.profile-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ==========================================
+   RESPONSIVE FALLBACK
+   ========================================== */
+
+/* Stacks them on mobile screens so it doesn't break */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
 }
