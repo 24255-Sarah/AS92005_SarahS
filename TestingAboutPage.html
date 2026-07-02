@@ -3,57 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terra Nil Project</title>
-    <!-- Link to the external CSS file -->
+    <title>AboutPage</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+....
+<!DOCTYPE html>
 
-    <!-- Navigation Bar -->
-    <div class="topnav">
-        <a class="active" href="Homepage.html">Home</a>
-        <a href="News.html">News</a>
-        <a href="AboutPage.html">About</a>
-    </div>
-
-    <!-- Banner Container -->
-    <div class="main-banner">
-        <div class="banner-content">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+          </head>
+</body>
+<nav class="navbar">
+    <a href="Homepage.html">Home</a>
+    <a href="News.html">News</a>
+    <a href="AboutPage.html" class="active">About</a>
+</nav>
+    </nav>
+    <!-- Header Banner Image -->
+        <div class="banner">
             <img src="Screenshot 2026-05-13 095003.png" alt="Terra Nil Banner">
         </div>
+ ....
+<div class="row">
+  <div class="column"></div>
+  <div class="column"></div>
+</div
+....
+        <p class="about-text">
+           Hi, I’m Shana! Welcome to my digital space, where my love for cozy strategy gaming, amateur gardening, and hiking all come together to celebrate Terra Nil. As someone who loves nature and plants, I grew tired of traditional video games that focus on exploiting resources and building concrete cities. Instead, Terra Nil captured my heart by focusing entirely on environmental restoration. While the game doesn't use the explicit terms, the gameplay beautifully mirrors the Māori philosophies of kaitiakitanga (guardianship) and manaakitanga (hospitality and care). It tasks you with healing poisoned soil and preparing a welcoming home for native wildlife. By forcing you to recycle all your technology and fly away at the end, it perfectly reflects my own belief that humans do not own the earth, we are merely temporary caretakers meant to leave it better than we found it.
+        </p>
+
+        <h2>Contact Me</h2>
+
+        <!-- Your contact form goes here -->
+
     </div>
 
-    <!-- About Me Section -->
+    <!-- Right Side -->
     <div class="row">
-        <!-- First Column: About Me Text -->
-        <div class="column" style="flex: 1.1; line-height: 1.5; font-size: 14px;">
-            <h2 style="font-weight: 700; margin-top: 0; margin-bottom: 10px;">About Me</h2>
-            <p style="margin: 0;">
-                Hi, I'm Shana! Welcome to my curated corner of the internet, where personal style meets
-                intentional living. I believe fashion should be beautiful, expressive, and deeply respectful
-                of the world around us. In my daily life, I strive to practice kaitiakitanga, which means
-                environmental guardianship and looking after our natural resources. This digital space serves
-                as an aesthetic lookbook, but also as a welcoming community rooted in manaakitanga, the
-                practice of showing hospitality, kindness, and lifting up the dignity of others. I want
-                everyone who visits to feel valued and inspired to live mindfully.
-            </p>
-        </div>
+  <div class="column"></div>
+  <div class="column"></div>
+</div>
 
-        <!-- Second Column: Profile Picture -->
-        <div class="column" style="flex: 0.9; display: flex;">
-            <img src="Screenshot 2026-06-23 101352.png" alt="A picture of me" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
-        </div>
+        <img src="Screenshot 2026-06-23 101352.png" alt="Picture of me" class="side-image">
+
     </div>
-        <div class="row" style="margin-top: 20px;">
-                    <!-- Add more form inputs here as needed -->
-                </form>
-            </div>
-        </div>
-    </div>
+
+</div>
+....
+
+ ....
+                    <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Contact me if you need any information</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="screenshot 2026-06-26 132445.png " style="width:100%">
     </div>
     <div class="column">
       <form action="/action_page.php">
- <h2>Contact Us</h2>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
         <label for="lname">Last Name</label>
         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
         <label for="country">Country</label>
@@ -256,12 +269,8 @@
   <option value="Yemen">Yemen</option>
   <option value="Zambia">Zambia</option>
   select>
-
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
         <input type="submit" value="Submit">
       </form>
       </div>
-    </div>
-  </div>
-</div>
