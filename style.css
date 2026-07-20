@@ -673,3 +673,60 @@ h1 {
 .column {
   flex: 50%;
 }
+....
+/* Creates a flexible side-by-side row wrapper */
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;            /* Adds uniform space between text and photo */
+  align-items: center;  /* Vertically centers both sections */
+}
+
+/* Dictates equal width for the text and image containers */
+.column {
+  flex: 1;
+}
+
+/* Responsive constraints to keep image within limits */
+.about-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+....
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #ffffff;
+  color: #000000;
+  font-size: 30px;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+.column {
+  float: left;
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
