@@ -37,87 +37,158 @@
     <!-- About Section -->
     <div class="about-section">
 
-        <div class="about-box">
-            <h2>About Me</h2>
+    <div class="about-box">
+        <h2>About Me</h2>
 
-            <p>
-                Hi, I'm Shana! Welcome to my curated corner of the internet,
-                where personal style meets intentional living.
+        <p>
+            Hi, I'm Shana! Welcome to my curated corner of the internet,
+            where personal style meets intentional living.
 
-                I believe fashion should be beautiful, expressive and deeply
-                respectful of the world around us.
+            I believe fashion should be beautiful, expressive and deeply
+            respectful of the world around us.
 
-                In my daily life, I strive to practice
-                <strong>kaitiakitanga</strong>, caring for our environment.
+            In my daily life, I strive to practice
+            <strong>kaitiakitanga</strong>, caring for our environment.
 
-                This website is built around
-                <strong>manaakitanga</strong>, creating a welcoming community
-                where everyone feels valued and inspired.
-            </p>
-        </div>
-
-        <div class="about-box">
-            <h2>Picture of Me</h2>
-
-            <img src="Screenshot 2026-06-23 101352.png" alt="Picture of Me">
-        </div>
-
+            This website is built around
+            <strong>manaakitanga</strong>, creating a welcoming community
+            where everyone feels valued and inspired.
+        </p>
     </div>
 
-    <!-- Contact Section -->
-    <div class="container">
-
-        <div style="text-align:center">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or want to know more, contact us!</p>
-        </div>
-
-        <div class="row">
-
-            <div class="column">
-                <img src="Screenshot 2026-06-26 132542.png" alt="Contact Image" style="width:100%;">
-            </div>
-
-            <div class="column">
-
-                <form action="/action_page.php">
-
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-                    <label for="country">Country</label>
-
-                    <select id="country" name="country">
-                        <option value="New Zealand">New Zealand</option>
-                        <option value="Australia">Australia</option>
-                        <option value="India">India</option>
-                        <option value="United States of America">United States of America</option>
-                        <option value="United Kingdom">United Kingdom</option>
-                        <option value="Sri Lanka">Sri lanka</option>
-                        <!-- Paste the rest of your country options here -->
-
-                    </select>
-
-                    <label for="subject">Subject</label>
-
-                    <textarea id="subject"
-                              name="subject"
-                              placeholder="Write something.."
-                              style="height:170px"></textarea>
-
-                    <input type="submit" value="Submit">
-
-                </form>
-
-            </div>
-
-        </div>
-
+    <div class="about-box">
+        <h2>Picture of Me</h2>
+        <img src="Screenshot 2026-06-23 101352.png" alt="Picture of Me">
     </div>
+
+</div>
+<style>
+.about-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    width: 96%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.about-box:first-child {
+    flex: 2;
+}
+
+.about-box:last-child {
+    flex: 1;
+}
+
+.about-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.about-box img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+</style>
+ <!-- Contact page -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+</style>
+</head>
+<body>
+
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Contact us if you have any questions!</p>
+  </div>
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+          <option value="usa">New Zealand</option>
+            <option value="usa">Sri lanka</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <div class="column">
+        <img src="Screenshot 2026-06-26 132542.png" style="width:100%">
+         <img src="Screenshot 2026-05-13 100157.png" style="width:100%">
+</div>
 
 </body>
-
 </html>
+
+

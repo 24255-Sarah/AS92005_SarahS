@@ -1,4 +1,6 @@
-/* General Page Resets */
+/* =========================
+   General
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -7,857 +9,134 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    background: #f4f4f4;
     color: #333;
+    line-height: 1.6;
 }
 
-/* Banner Styling */
-.main-banner {
+/* =========================
+   Navigation
+========================= */
+.topnav {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    padding: 15px;
+}
+
+.topnav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+.topnav a:hover {
+    color: #04AA6D;
+}
+
+.topnav .active {
+    color: #04AA6D;
+}
+
+/* =========================
+   Banner
+========================= */
+img[alt="Terra Nil Banner"] {
     width: 100%;
-    background-color: #fff;
-    padding: 20px 0;
-    border-bottom: 2px solid #ddd;
-}
-
-.banner-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.banner-content img {
-    width: 100%;
-    height: auto;
     display: block;
-    border-radius: 8px;
 }
 
-.banner-text {
-    margin-top: 15px;
-}
-
-.banner-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-/* Content Grid Styling */
-.content-container {
-    max-width: 1100px;
+/* =========================
+   About Section
+========================= */
+.about-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    width: 90%;
+    max-width: 1200px;
     margin: 40px auto;
-    padding: 0 20px;
+}
+
+.about-box:first-child {
+    flex: 2;
+}
+
+.about-box:last-child {
+    flex: 1;
+}
+
+.about-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.about-box img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* =========================
+   Contact Form
+========================= */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 60px;
-    gap: 40px;
-}
-
-/* Flips the row order for the alternating layout effect */
-.row.reverse {
-    flex-direction: row-reverse;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .column {
     flex: 1;
+    min-width: 300px;
 }
 
-.text-col h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-}
-
-.img-col img {
+.column img {
     width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    background-color: #ddd; /* Serves as a gray placeholder box if image is missing */
-    min-height: 200px;
 }
 
-/* Responsive design for smaller screens */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px;
+    border: 1px solid #ccc;
+}
+
+input[type=submit] {
+    background: #04AA6D;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background: #03955d;
+}
+
+/* =========================
+   Responsive
+========================= */
 @media (max-width: 768px) {
-    .row, .row.reverse {
+
+    .about-section,
+    .row {
         flex-direction: column;
     }
 }
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white
-}
-.banner-container {
-    display: flex;         /* Aligns items side-by-side */
-    gap: 15px;             /* Adds space between the images */
-    justify-content: center; /* Centers the images on the screen */
-}
-
-.banner-container img {
-    width: 48%;            /* Ensures both fit on one line */
-    height: auto;          /* Maintains the aspect ratio */
-}
-body {
-  margin: 0; /* This removes the tiny gap at the very top and sides */
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-}
-/* Navigation bar container */
-.topnav {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
-  display: flex;
-  flex-direction: row;    /* Places logo and links next to each other */
-  justify-content: center; /* Centers the whole group horizontally */
-  align-items: center;    /* Aligns logo and words vertically straight */
-  padding: 15px 0;
-  gap: 30px;              /* Spacing between the logo and the links container */
-}
-
-/* Logo sizing */
-.nav-logo img {
-  height: 40px;           /* Adjust this to make your logo smaller or larger */
-  width: auto;
-  display: block;
-}
-
-/* Links container */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 15px;              /* Spacing between individual links */
-}
-
-/* Individual links styling */
-.nav-links a {
-  color: #000000;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: bold;
-  padding: 8px 16px;
-  transition: all 0.2s ease-in-out;
-}
-
-/* Hover effect */
-.nav-links a:hover {
-  background-color: #f0f0f0;
-  border-radius: 4px;
-}
-/* Navigation bar container */
-.topnav {
-  background-color: #ffffff; /* Sets the bar background to white */
-  overflow: hidden;
-  border-bottom: 1px solid #e0e0e0; /* Optional: adds a subtle bottom border so it stands out against a white page */
-}
-
-/* Navigation bar links */
-.topnav a {
-  float: left;
-  color: #000000; /* Sets text color to black */
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: bold; /* Makes the text bold */
-}
-
-/* Hover state (When you mouse over the links) */
-.topnav a:hover {
-  background-color: #f0f0f0; /* Soft gray background on hover */
-  color: #000000; /* Keeps text black on hover */
-}
-
-/* Active/Current page link (Optional: if you still want a highlighted tab) */
-.topnav a.active {
-  background-color: #e0e0e0; /* Darker gray to show which page is selected */
-  color: #000000;
-}
-/* Navigation bar container */
-.topnav {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
-  display: flex;
-  justify-content: center; /* Centers the links perfectly */
-  align-items: center;
-  padding: 15px 20px;
-  position: relative;      /* Anchors the absolute logo */
-  min-height: 50px;
-}
-......
-* {
-  box-sizing: border-box;
-}
-
-/* Style inputs */
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-/* Style the container/contact section */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 10px;
-}
-
-/* Create two columns that float next to eachother */
-.column {
-  float: left;
-  width: 50%;
-  margin-top: 6px;
-  padding: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-....
-/* General Page Styling */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: #000000;
-}
-
-/* Top Navigation Bar */
-.navbar {
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid #ddd;
-}
-
-.navbar a {
-    padding: 14px 40px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.navbar a.active {
-    background-color: #e0e0e0;
-}
-
-/* Page Layout Container */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Banner Styling */
-.banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 20px;
-}
-
-/* Two-Column Grid Setup */
-.row {
-    display: flex;
-    gap: 40px;
-}
-
-.column-left {
-    flex: 3;
-}
-
-.column-right {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.side-img {
-    width: 100%;
-    border-radius: 4px;
-}
-
-/* Typography */
-h1 {
-    font-size: 32px;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.about-text {
-    line-height: 1.5;
-    font-size: 14px;
-    text-align: justify;
-    margin-bottom: 40px;
-}
-
-/* Contact Form Layout */
-.contact-section h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-.form-row {
-    display: flex;
-    gap: 15px;
-}
-
-.form-group {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    font-size: 12px;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #fafafa;
-    font-size: 13px;
-}
-
-.form-group textarea {
-    height: 80px;
-    resize: none;
-}
-
-/* Submit Button styling */
-.submit-btn {
-    width: 100%;
-    background-color: #000000;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 20px;
-    font-size: 14px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-/* Footer & Social Media Grid */
-.social-footer {
-    margin-top: 50px;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-}
-
-.social-footer h2 {
-    font-size: 24px;
-    font-weight: normal;
-    margin-bottom: 20px;
-}
-
-.social-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.social-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-}
-
-/* Generic placeholders for colored brand icons */
-.icon {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-}
-.linkedin { background-color: #0077b5; }
-.facebook { background-color: #1877f2; border-radius: 50%; }
-.instagram { background-color: #e1306c; }
-.tiktok { background-color: #000000; border-radius: 50%; }
-.discord { background-color: #5865f2; }
-.reddit { background-color: #ff4500; border-radius: 50%; }
-....
-<body>
-
-    <!-- Header Banner Image (Moved to the very top) -->
-    <div class="banner">
-        <img src="w3images/map.jpg" alt="Terra Nil Banner">
-    </div>
-
-   /* Navigation bar container */
-.topnav {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
-  display: flex;
-  flex-direction: row;    /* Places logo and links next to each other */
-  justify-content: center; /* Centers the whole group horizontally */
-  align-items: center;    /* Aligns logo and words vertically straight */
-  padding: 15px 0;
-  gap: 30px;              /* Spacing between the logo and the links container */
-}
-
-.row {
-    display: flex;
-    gap: 30px; /* Adds spacing between text and picture */
-    align-items: flex-start;
-}
-
-.column-left {
-    flex: 3; /* Allocates more room for text */
-}
-
-.column-right {
-    flex: 2; /* Allocates room for the picture */
-}
-....
-/* Two Columns */
-.row{
-    display:flex;
-    gap:40px;
-    align-items:flex-start;
-    max-width:1200px;
-    margin:auto;
-    padding:40px;
-}
-
-/* Left */
-.column-left{
-    flex:2;
-}
-
-/* Right */
-.column-right{
-    flex:1;
-    display:flex;
-    flex-direction:column;
-    gap:30px;
-}
-
-.side-image{
-    width:100%;
-    border-radius:8px;
-}
-
-/* About text */
-.about-text{
-    line-height:1.7;
-    text-align:justify;
-}
-
-/* Form */
-.contact-form{
-    margin-top:20px;
-}
-
-.form-row{
-    display:flex;
-    gap:15px;
-}
-
-.form-row input{
-    width:50%;
-}
-
-.contact-form input,
-.contact-form textarea{
-    width:100%;
-    padding:12px;
-    margin-top:15px;
-    border:1px solid #ccc;
-    border-radius:4px;
-    box-sizing:border-box;
-}
-
-.contact-form textarea{
-    height:140px;
-    resize:none;
-}
-
-.contact-form button{
-    width:100%;
-    margin-top:15px;
-    padding:12px;
-    background:black;
-    color:white;
-    border:none;
-    cursor:pointer;
-}
-
-.contact-form button:hover{
-    background:#333;
-}
-
-/* Responsive */
-@media (max-width:768px){
-
-    .row{
-        flex-direction:column;
-    }
-
-    .form-row{
-        flex-direction:column;
-    }
-
-    .form-row input{
-        width:100%;
-    }
-
-}
-......
-/* Navigation bar container */
-.navbar {
-    display: flex;
-    justify-content: flex-end;
-    background-color: #ffffff;
-    padding: 10px 20px;
-}
-
-/* Individual navigation links */
-.navbar a {
-    float: left;
-  color: #333333;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Hover effect for links */
-.navbar a:hover {
-    color: #666666;
-}
-
-/* Style for the current/active page link */
-.navbar a.active {
-    border-bottom: 2px solid #000000;
-    color: #000000;
-}
-.....
-/* ==========================================
-   LAYOUT STRUCTURE (The Side-by-Side Split)
-   ========================================== */
-
-.container {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-    /* Creates the two distinct columns from your drawing */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-/* Left side stays as text content */
-.left-column {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Right side holds the relocated heading and image box */
-.right-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-/* ==========================================
-   RIGHT COLUMN COMPONENT (Your Black Drawing)
-   ========================================== */
-
-/* The "Contact Me" heading placed on the right side */
-.right-column h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    align-self: flex-start; /* Aligns left within the right column */
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-}
-
-/* The thick border box surrounding the photo */
-.profile-box {
-    width: 100%;
-    max-width: 400px;
-    border: 3px solid #000000; /* Recreates your drawn border */
-    padding: 10px;
-    background-color: #fafafa;
-}
-
-/* Ensures the user photo scales perfectly inside the border */
-.profile-box img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-
-/* ==========================================
-   RESPONSIVE FALLBACK
-   ========================================== */
-
-/* Stacks them on mobile screens so it doesn't break */
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-}
-.row {
-  display: flex;
-}
-
-.column {
-  flex: 50%;
-}
-....
-/* Creates a flexible side-by-side row wrapper */
-.row {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;            /* Adds uniform space between text and photo */
-  align-items: center;  /* Vertically centers both sections */
-}
-
-/* Dictates equal width for the text and image containers */
-.column {
-  flex: 1;
-}
-
-/* Responsive constraints to keep image within limits */
-.about-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-....
-.header {
-  padding: 60px;
-  text-align: center;
-  background: #ffffff;
-  color: #000000;
-  font-size: 30px;
-}
-.column {
-  float: left;
-  width: 50%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.row {
-  display: flex;
-}
-
-.column {
-  flex: 50%;
-}
-.column {
-  float: left;
-}
-
-.left {
-  width: 25%;
-}
-
-.right {
-  width: 75%;
-}
-....
-.column {
-  float: left;
-  width: 50%;
-  box-sizing: border-box;
-}
-....
-.row {
-  display: flex;
-}
-.column {
-  flex: 1; /* Makes both columns take up equal width */
-}
-...
-.column {
-  background-color: #ffffff;
-  color: #000000;
-  /* Keep any other existing column styles below this */
-}
-....
-* {
-  box-sizing: border-box;
-}
-
-/* Style inputs */
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-/* Style the container/contact section */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 10px;
-}
-
-/* Create two columns that float next to eachother */
-.column {
-  float: left;
-  width: 50%;
-  margin-top: 6px;
-  padding: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-....
-/* About Section */
-
-.about-section{
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    gap:40px;
-    width:90%;
-    margin:40px auto;
-}
-
-.about-box{
-    background:white;
-    width:45%;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.15);
-}
-
-.about-box img{
-    width:100%;
-    display:block;
-    border-radius:8px;
-}
-...
-.about-container{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:30px;
-    width:90%;
-    margin:40px auto;
-}
-
-.about-box{
-    width:48%;
-    background:white;
-    padding:20px;
-    border-radius:10px;
-}
-
-.about-box img{
-    width:100%;
-    height:auto;
-}
-.column{
-    width:100%;
-}
-.column{
-    display:block;
-}
-.column{
-    float:none;
-}
-...
