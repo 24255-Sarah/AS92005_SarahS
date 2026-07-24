@@ -43,14 +43,7 @@ body {
    Banner
 ========================= */
 img[alt="Terra Nil Banner"] {
-    width: 67%;
-    display: block;
-    .banner-container {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
     width: 100%;
-}
-
 }
 
 /* =========================
@@ -172,4 +165,3 @@ input[type=submit]:hover {
 h2 {
     margin-bottom: 20px;
 }
-....
