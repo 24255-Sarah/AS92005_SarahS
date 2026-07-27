@@ -1,166 +1,230 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 50px 0;
-    padding: 0;
-
-    /* Centering Layout Mechanics */
-    display: flex;
-    flex-direction: column;
-    align-items: center;    /* Keeps all direct child sections centered */
-    width: 100%;
-}
-
+/* ==========================================
+   1. General Page Layout & Centering
+   ========================================== */
 * {
     box-sizing: border-box;
 }
-/* Navigation bar */
-/* Add a black background color to the top navigation */
+
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Subtle light background */
+    color: #333333;
+
+    /* Flexbox centers all top-level container blocks */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Base wrapper for sections to keep them responsive and aligned */
+.topnav,
+.banner-container,
+.about-section,
+.container,
+.row,
+.socials-container {
+    width: 100%;
+    max-width: 1100px; /* Constrains total layout width cleanly */
+    padding: 0 20px;   /* Prevents content touching screen edges on mobile */
+    margin-bottom: 40px;
+}
+
+/* ==========================================
+   2. Navigation Bar
+   ========================================== */
 .topnav {
-  background-color: #ffffff;
-  overflow: hidden;
-  border-bottom: 1px solid #ddd;
-  display: flex;         /* Turns the bar into a flex container */
-  justify-content: center; /* Centers the links horizontally */
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+    padding: 0;
 }
 
 .topnav a {
-  /* float: left; */     /* REMOVE or delete this line entirely */
-  color: #333333;        /* Changed to dark gray so text is readable on white */
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+    color: #555555;
+    text-align: center;
+    padding: 16px 24px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color: white;
+    background-color: #f5f5f5;
+    color: #000000;
 }
 
-/* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-/* Grid Framework */
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
+    background-color: #04AA6D; /* Your signature green */
+    color: white;
 }
 
-.column {
-    background-color: white;
-    color: black;
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
+/* ==========================================
+   3. Banner
+   ========================================== */
+.banner-container {
+    padding: 0;
 }
 
-/* Banner Component */
 .banner-container img {
     width: 100%;
+    height: auto;
     display: block;
+    border-radius: 8px; /* Smooth rounded corners */
 }
 
-/* About Section Flexbox Layout */
+/* ==========================================
+   4. About Section (2-Column Grid)
+   ========================================== */
 .about-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    width: 96%;
-    max-width: 1200px;
-    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px;
 }
 
 .about-box {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Soft premium shadow */
+    display: flex;
+    flex-direction: column;
 }
 
-.about-box:first-child {
-    flex: 2;
+.about-box h2 {
+    margin-top: 0;
+    color: #222222;
+    border-bottom: 2px solid #04AA6D;
+    padding-bottom: 8px;
+    display: inline-block;
+    align-self: flex-start;
 }
 
-.about-box:last-child {
-    flex: 1;
+.about-box p {
+    line-height: 1.6;
+    color: #555555;
 }
 
 .about-box img {
     width: 100%;
-    display: block;
-    border-radius: 10px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-/* Contact Form Elements */
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 10px;
-}
-
+/* ==========================================
+   5. Contact Section & Form
+   ========================================== */
 .contact-header {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-input[type=text], select, textarea {
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Splitting form and image columns */
+    gap: 40px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+input[type="text"], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-family: inherit;
 }
 
-textarea {
-    height: 170px;
-}
-
-input[type=submit] {
+input[type="submit"] {
     background-color: #04AA6D;
     color: white;
-    padding: 12px 20px;
+    padding: 14px 20px;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.2s;
 }
 
-input[type=submit]:hover {
-    background-color: #45a049;
+input[type="submit"]:hover {
+    background-color: #038f5b;
+}
+
+/* Stacked contact layout images */
+.contact-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .contact-images img {
     width: 100%;
-    display: block;
-    margin-bottom: 10px;
+    height: auto;
+    border-radius: 8px;
 }
 
-/* Social Media Section Setup */
+/* ==========================================
+   6. Socials Footer
+   ========================================== */
 .socials-container {
-    padding: 20px;
     text-align: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 60px; /* Leave space at page bottom */
 }
 
 .socials {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Grid of social boxes */
     gap: 20px;
-    justify-content: center;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .social-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .social-item img {
     width: 32px;
     height: 32px;
+}
+
+.social-item span {
+    font-size: 13px;
+    color: #666;
+}
+
+/* ==========================================
+   7. Mobile Layout Tweaks
+   ========================================== */
+@media (max-width: 768px) {
+    .about-section, .row {
+        grid-template-columns: 1fr; /* Switch to single-column display on phones */
+    }
 }
