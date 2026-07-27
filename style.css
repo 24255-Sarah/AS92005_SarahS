@@ -9,17 +9,14 @@ body {
     font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Subtle light background */
+    background-color: #f8f9fa;
     color: #333333;
-
-    /* Flexbox centers all top-level container blocks */
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-/* Base wrapper for sections to keep them responsive and aligned */
 .topnav,
 .banner-container,
 .about-section,
@@ -27,8 +24,8 @@ body {
 .row,
 .socials-container {
     width: 100%;
-    max-width: 1100px; /* Constrains total layout width cleanly */
-    padding: 0 20px;   /* Prevents content touching screen edges on mobile */
+    max-width: 1100px;
+    padding: 0 20px;
     margin-bottom: 40px;
 }
 
@@ -60,7 +57,7 @@ body {
 }
 
 .topnav a.active {
-    background-color: #04AA6D; /* Your signature green */
+    background-color: #04AA6D;
     color: white;
 }
 
@@ -75,7 +72,7 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px; /* Smooth rounded corners */
+    border-radius: 8px;
 }
 
 /* ==========================================
@@ -83,7 +80,7 @@ body {
    ========================================== */
 .about-section {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
 
@@ -91,13 +88,15 @@ body {
     background: #ffffff;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Soft premium shadow */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
 }
 
+.about-box h1,
 .about-box h2 {
     margin-top: 0;
+    font-size: 24px;
     color: #222222;
     border-bottom: 2px solid #04AA6D;
     padding-bottom: 8px;
@@ -127,7 +126,7 @@ body {
 
 .row {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Splitting form and image columns */
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     background: #ffffff;
     padding: 40px;
@@ -171,7 +170,6 @@ input[type="submit"]:hover {
     background-color: #038f5b;
 }
 
-/* Stacked contact layout images */
 .contact-images {
     display: flex;
     flex-direction: column;
@@ -193,12 +191,12 @@ input[type="submit"]:hover {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    margin-bottom: 60px; /* Leave space at page bottom */
+    margin-bottom: 60px;
 }
 
 .socials {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Grid of social boxes */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
@@ -225,7 +223,6 @@ input[type="submit"]:hover {
    ========================================== */
 @media (max-width: 768px) {
     .about-section, .row {
-        grid-template-columns: 1fr; /* Switch to single-column display on phones */
+        grid-template-columns: 1fr;
     }
 }
-..
